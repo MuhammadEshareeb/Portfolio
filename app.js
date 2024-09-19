@@ -25,7 +25,7 @@ $(document).ready(function () {
 
     // CV download functionality
     document.getElementById("download-cv").addEventListener("click", function () {
-        var cvUrl = 'file:///C:/Users/HP/Downloads/MUHAMMAD%20ESHAREEB%20%7BMERN%20STACK%20DEVELOPER%7D.pdf'; // Replace with actual URL
+        var cvUrl = 'file:///C:/Users/HP/Desktop/New%20folder/Portfolio/MUHAMMAD%20ESHAREEB%20%7BMERN%20STACK%20DEVELOPER%7D.pdf'; // Replace with actual URL
         var link = document.createElement('a');
         link.href = cvUrl;
         link.download = 'Muhammad_Eshareeb_CV.pdf'; // The name of the file to be downloaded
