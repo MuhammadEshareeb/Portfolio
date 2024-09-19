@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $(window).scroll(function () {
-        // checks if window is scrolled more than 500px, adds/removes solid class
+        // Checks if window is scrolled more than 550px, adds/removes solid class
         if ($(this).scrollTop() > 550) {
             $('.navbar').addClass('solid');
             $('.back-to-top').addClass('visible');
@@ -8,32 +8,27 @@ $(document).ready(function () {
             $('.navbar').removeClass('solid');
             $('.back-to-top').removeClass('visible');
         }
-
     });
-});
 
-
-$(document).ready(function () {
-    // Add smooth scrolling to all links
+    // Smooth scrolling for links
     $("a").on('click', function (event) {
-
-        // Make sure this.hash has a value before overriding default behavior
         if (this.hash !== "") {
-            // Prevent default anchor click behavior
             event.preventDefault();
-
-            // Store hash
             var hash = this.hash;
-
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
             $('html, body').animate({
                 scrollTop: $(hash).offset().top
             }, 800, function () {
-
-                // Add hash (#) to URL when done scrolling (default click behavior)
                 window.location.hash = hash;
             });
-        } // End if
+        }
+    });
+
+    // CV download functionality
+    document.getElementById("download-cv").addEventListener("click", function () {
+        var cvUrl = 'file:///C:/Users/HP/Downloads/MUHAMMAD%20ESHAREEB%20%7BMERN%20STACK%20DEVELOPER%7D.pdf'; // Replace with actual URL
+        var link = document.createElement('a');
+        link.href = cvUrl;
+        link.download = 'Muhammad_Eshareeb_CV.pdf'; // The name of the file to be downloaded
+        link.click();
     });
 });
